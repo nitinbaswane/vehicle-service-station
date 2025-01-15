@@ -1,5 +1,23 @@
 package com.manageoperation;
+import com.vehicleservicestation.*;
+public class PartsOp extends Parts{
 
-public class PartsOp {
+	public PartsOp(String name, String description, int price, int id) {
+		super(name, description, price, id);
+		// TODO Auto-generated constructor stub
+	}
+	public void addPart() {
+		
+	}
+    public void displayAllParts() {
+		
+	}
+    
+	public void deletePart() {
+		
+	}
+	public void editPartPrice() {
+		
+	}
 
 }

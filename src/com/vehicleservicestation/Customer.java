@@ -1,18 +1,17 @@
 package com.vehicleservicestation;
 
+import java.util.Objects;
 
 public  class Customer implements Comparable<Customer> {
 
-	public int compareTo(String anotherString) {
-		return address.compareTo(anotherString);
-	}
+	
 
 	private String cname;
-	private int mobno;
+	private long mobno;
 	private String email;
 	private String address;
 	
-	public Customer(String cname, int mobno, String email, String address) {
+	public Customer(String cname, long mobno, String email, String address) {
 		super();
 		this.cname = cname;
 		this.mobno = mobno;
@@ -32,7 +31,7 @@ public  class Customer implements Comparable<Customer> {
 		return mobno;
 	}
 
-	public void setMobno(int mobno) {
+	public void setMobno(long mobno) {
 		this.mobno = mobno;
 	}
 
@@ -41,6 +40,7 @@ public  class Customer implements Comparable<Customer> {
 	}
 
 	public void setEmail(String email) {
+		
 		this.email = email;
 	}
 
@@ -57,9 +57,26 @@ public  class Customer implements Comparable<Customer> {
 		return "Customer [cname=" + cname + ", mobno=" + mobno + ", email=" + email + ", address=" + address + "]";
 	}
 
+//	@Override
+//	public int hashCode() {
+//		return Objects.hash(mobno);
+//	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Customer other = (Customer) obj;
+		return mobno == other.mobno;
+	}
+
 	@Override
 	public int compareTo(Customer o) {
-		 return Integer.compare(this.mobno,o.mobno);
+		 return Long.compare(this.mobno,o.mobno);
 	}
 
 
