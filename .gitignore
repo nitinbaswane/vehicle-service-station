@@ -1,5 +1,6 @@
 folder/
 bin/com/
+bin/
 .settings/
 .project
 .classpath
