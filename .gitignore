@@ -1,6 +1,5 @@
 folder/
-bin/com/customer
-bin/
+bin/*
 .settings/
 .project
 .classpath
