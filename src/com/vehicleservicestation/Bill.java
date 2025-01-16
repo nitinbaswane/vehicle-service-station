@@ -1,4 +1,4 @@
-package com.vehicleservicestation;
+package src.com.vehicleservicestation;
 
 public class Bill {
 

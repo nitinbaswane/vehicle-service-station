@@ -1,18 +1,23 @@
-package com.vehicleservicestation;
+package src.com.vehicleservicestation;
 
 import java.util.Objects;
 
-public  class Customer implements Comparable<Customer> {
+public  class Customer{
 
-	
+	//implements Comparable<Customer>
 
 	private String cname;
-	private long mobno;
+	private String mobno;
 	private String email;
 	private String address;
 	
-	public Customer(String cname, long mobno, String email, String address) {
+	
+	public Customer() {
 		super();
+	}
+
+	public Customer(String cname, String mobno, String email, String address) {
+		//super();
 		this.cname = cname;
 		this.mobno = mobno;
 		this.email = email;
@@ -27,11 +32,11 @@ public  class Customer implements Comparable<Customer> {
 		this.cname = cname;
 	}
 
-	public long getMobno() {
+	public String getMobno() {
 		return mobno;
 	}
 
-	public void setMobno(long mobno) {
+	public void setMobno(String mobno) {
 		this.mobno = mobno;
 	}
 
@@ -57,10 +62,10 @@ public  class Customer implements Comparable<Customer> {
 		return "Customer [cname=" + cname + ", mobno=" + mobno + ", email=" + email + ", address=" + address + "]";
 	}
 
-//	@Override
-//	public int hashCode() {
-//		return Objects.hash(mobno);
-//	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(mobno);
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -74,10 +79,10 @@ public  class Customer implements Comparable<Customer> {
 		return mobno == other.mobno;
 	}
 
-	@Override
-	public int compareTo(Customer o) {
-		 return Long.compare(this.mobno,o.mobno);
-	}
+	//@Override
+//	public int compareTo(Customer o) {
+//		 return Long.compare(this.mobno,o.mobno);
+//	}
 
 
 	

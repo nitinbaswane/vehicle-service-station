@@ -1,4 +1,4 @@
-package com.menu;
+package src.com.menu;
 
 import java.util.Scanner;
 

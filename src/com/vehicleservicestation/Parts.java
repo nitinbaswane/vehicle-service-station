@@ -1,22 +1,22 @@
-package com.vehicleservicestation;
+package src.com.vehicleservicestation;
 
 public class Parts{
-	private String name;
+	private String pname;
 	private String description;
 	private int price;
 	private int id;
-	public Parts(String name, String description, int price, int id) {
+	public Parts(String pname, String description, int price, int id) {
 		super();
-		this.name = name;
+		this.pname = pname;
 		this.description = description;
 		this.price = price;
 		this.id = id;
 	}
 	public String getName() {
-		return name;
+		return pname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String pname) {
+		this.pname = pname;
 	}
 	public String getDescription() {
 		return description;
@@ -38,7 +38,7 @@ public class Parts{
 	}
 	@Override
 	public String toString() {
-		return "Parts [name=" + name + ", description=" + description + ", price=" + price + ", id=" + id + "]";
+		return "Parts [name=" + pname + ", description=" + description + ", price=" + price + ", id=" + id + "]";
 	}
 	
 	

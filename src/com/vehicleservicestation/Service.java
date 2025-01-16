@@ -1,4 +1,4 @@
-package com.vehicleservicestation;
+package src.com.vehicleservicestation;
 
 import java.sql.Date;
 
