@@ -3,10 +3,11 @@ import java.util.Objects;
 
 
 public class Vehicle implements Comparable<Vehicle>{
+	private String vehicleNumber;
 	 private String manufacturer;
 	    private String model;
-	    private String vehicleNumber;
-		public Vehicle(String manufacturer, String model, String vehicleNumber) {
+	    
+		public Vehicle(String vehicleNumber,String manufacturer, String model) {
 			super();
 			this.manufacturer = manufacturer;
 			this.model = model;

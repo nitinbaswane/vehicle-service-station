@@ -12,6 +12,10 @@ public class Parts{
 		this.price = price;
 		this.id = id;
 	}
+	public Parts() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public String getName() {
 		return pname;
 	}

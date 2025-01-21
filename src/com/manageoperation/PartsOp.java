@@ -13,7 +13,7 @@ public class PartsOp extends Parts{
 		parts = new ArrayList<>();
 		sc = new Scanner(System.in);
 	}
-	public void addPart(Scanner sc) {
+	public void addPart() {
 	
 		System.out.print("Enter part name: ");
         String pname = sc.nextLine();
@@ -39,7 +39,7 @@ public class PartsOp extends Parts{
          }
 	}
     
-	public void deletePart(Scanner sc) {
+	public void deletePart() {
 		 System.out.println("\nParts List:");
          for (Parts p : parts) {
              System.out.println(p);
@@ -56,7 +56,7 @@ public class PartsOp extends Parts{
 		}
 		
 	}
-	public void editPartPrice(Scanner sc) {
+	public void editPartPrice() {
 		 System.out.println("\nParts List:");
          for (Parts p : parts) {
              System.out.println(p);

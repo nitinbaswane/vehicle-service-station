@@ -14,7 +14,7 @@ public class CustomerOp extends Customer{
 		this.customers = new HashSet<Customer>();
 		this.sc =new Scanner(System.in);
 	}
-	public void addCustomer(Scanner sc) {
+	public void addCustomer() {
 		System.out.println("enter name");
 		String name=(sc.nextLine());
 		System.out.println("enter mobile number");
@@ -31,7 +31,7 @@ public class CustomerOp extends Customer{
     	for(Customer c :customers)
 		System.out.println(c);
 	}
-    public Customer findCustomer(Scanner sc) {
+    public Customer findCustomer() {
     	System.out.println("enter mobileNumber of customer");
     	String mn=sc.nextLine();
     	
@@ -44,7 +44,7 @@ public class CustomerOp extends Customer{
     	}
     	return c;
 	}
-	public void deleteCustomer(Scanner sc) {
+	public void deleteCustomer() {
 		System.out.println("enter mobileNumber of customer");
     	String mn=sc.nextLine();
     	for(Customer c :customers) {
@@ -53,12 +53,13 @@ public class CustomerOp extends Customer{
     		System.out.println("customer deleted sucessfully");
     		break;
     	}
+    	else {System.out.println("customer not found ");}
     	}
 		
 	}
-	public void editCustomer(Scanner sc) {
-		Customer c=findCustomer(sc);
-	//	if() {
+	public void editCustomer() {
+		Customer c=findCustomer();
+		if(c!=null) {
 		System.out.println("enter name");
 		c.setCname(sc.nextLine());
 		System.out.println("enter mobile number");
@@ -69,7 +70,9 @@ public class CustomerOp extends Customer{
 		c.setAddress(sc.nextLine());
 		
 	   	   customers.add(c);
-		//}
+		}
+		else {System.out.println("customer not found ");}
+		
 		
 	}
 	
