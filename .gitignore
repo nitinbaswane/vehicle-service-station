@@ -1,6 +1,7 @@
 folder/
 bin/*
-.settings/
+.settings/*
 .project
 .classpath
 test.txt
+.class
