@@ -44,15 +44,16 @@ class ServiceStation implements Serializable {
     
     
     
-    public List<Customer> displayAllCustomers() {
-        return new ArrayList<>(customers);
+    public void displayAllCustomers() {
+    	for(Customer c :customers)
+    		System.out.println(c);
     }
     
     
     
     public Customer displayCustomerDetails() throws ServiceStationException {
     	String mobileNumber = null;
-        Customer customer = findCustomer(mobileNumber);
+        Customer customer = findCustomer();
         if (customer == null) {
             throw new ServiceStationException("Customer not found");
         }
@@ -66,7 +67,7 @@ class ServiceStation implements Serializable {
     public void removeCustomer() throws ServiceStationException {
     	System.out.println("enter mobile number");
 		String mobileNumber=(sc.nextLine());
-        Customer customer = findCustomer(mobileNumber);
+        Customer customer = findCustomer();
         if (customer != null) {
             customers.remove(customer);
         } else {
@@ -74,7 +75,7 @@ class ServiceStation implements Serializable {
         }
     }
     
-    public Customer findCustomer(String mobileNumber) {
+    public Customer findCustomer() {
     	System.out.println("enter mobile number");
 		String mobileNum=(sc.nextLine());
         for (Customer customer : customers) {
@@ -94,9 +95,8 @@ class ServiceStation implements Serializable {
     
  // Vehicle Management
     public void addVehicle() throws ServiceStationException {
-    	System.out.println("enter mobile number");
-		String mobileNumber=(sc.nextLine());
-		Customer customer = findCustomer(mobileNumber);
+    
+		Customer customer = findCustomer();
 		if (customer == null) {
             throw new ServiceStationException("Customer not found");
         }
@@ -112,16 +112,18 @@ class ServiceStation implements Serializable {
         customer.addVehicle(vehicle);
     }
     
-    public List<Vehicle> displayAllVehicles() {
+    public void displayAllVehicles() {
         List<Vehicle> vehicles = new ArrayList<>();
         for (Customer customer : customers) {
             vehicles.addAll(customer.getVehicles().values());
         }
-        return vehicles;
+        for(Vehicle v:vehicles) {
+        	System.out.println(v);
+        }
     }
     
     public List<Vehicle> displayCustomerVehicles(String mobileNumber) throws ServiceStationException {
-        Customer customer = findCustomer(mobileNumber);
+        Customer customer = findCustomer();
         if (customer == null) {
             throw new ServiceStationException("Customer not found");
         }
@@ -129,7 +131,7 @@ class ServiceStation implements Serializable {
     }
     
     public void editVehicle(String mobileNumber, String oldVehicleNumber, String newVehicleNumber) throws ServiceStationException {
-        Customer customer = findCustomer(mobileNumber);
+        Customer customer = findCustomer();
         if (customer == null) {
             throw new ServiceStationException("Customer not found");
         }
@@ -141,7 +143,7 @@ class ServiceStation implements Serializable {
     }
     
     public void deleteVehicle(String mobileNumber, String vehicleNumber) throws ServiceStationException {
-        Customer customer = findCustomer(mobileNumber);
+        Customer customer = findCustomer();
         if (customer == null) {
             throw new ServiceStationException("Customer not found");
         }
@@ -152,7 +154,7 @@ class ServiceStation implements Serializable {
     }
     // Service Request Management
     public Service selectCustomerVehicle(String mobileNumber, String vehicleNumber) throws ServiceStationException {
-        Customer customer = findCustomer(mobileNumber);
+        Customer customer = findCustomer();
         if (customer == null) throw new ServiceStationException("Customer not found");
 
         Vehicle vehicle = customer.getVehicle(vehicleNumber);
