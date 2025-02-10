@@ -208,16 +208,16 @@ public class ServiceStationMenu {
             choice = getInput("Enter Your Choice from above List = ");
             switch (choice) {
                 case 1:
-                    addPart();
+                    //addPart();
                     break;
                 case 2:
-                    displayAllParts();
+                    //displayAllParts();
                     break;
                 case 3:
-                    editPartPrice();
+                    //editPartPrice();
                     break;
                 case 4:
-                    deletePart();
+                    //deletePart();
                     break;
                 case 0:
                     System.out.println("Going back to Main Menu...");
@@ -249,8 +249,6 @@ public class ServiceStationMenu {
     // Placeholder methods for menu options
     
 
-    //private static void addVehicle() { System.out.println("Add Vehicle functionality here."); }
-    private static void displayAllVehicles() { System.out.println("Display All Vehicles functionality here."); }
     private static void displayCustomerVehicles() { System.out.println("Display Customer Vehicles functionality here."); }
     private static void editVehicle() { System.out.println("Edit Vehicle functionality here."); }
     private static void deleteVehicle() { System.out.println("Delete Vehicle functionality here."); }
@@ -262,8 +260,8 @@ public class ServiceStationMenu {
     private static void repairing() { System.out.println("Repairing functionality here."); }
     private static void oilChange() { System.out.println("Engine Oil Change/Additives functionality here."); }
 
-    private static void addPart() { System.out.println("Add Part functionality here."); }
-    private static void displayAllParts() { System.out.println("Display All Parts functionality here."); }
-    private static void editPartPrice() { System.out.println("Edit Part Price functionality here."); }
-    private static void deletePart() { System.out.println("Delete Part functionality here."); }
+   // private static void addPart() { System.out.println("Add Part functionality here."); }
+   // private static void displayAllParts() { System.out.println("Display All Parts functionality here."); }
+   // private static void editPartPrice() { System.out.println("Edit Part Price functionality here."); }
+   // private static void deletePart() { System.out.println("Delete Part functionality here."); }
 }
