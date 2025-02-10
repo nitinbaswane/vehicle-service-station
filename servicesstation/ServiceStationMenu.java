@@ -1,6 +1,7 @@
 package servicesstation;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Scanner;
 
 public class ServiceStationMenu {
@@ -27,6 +28,7 @@ public class ServiceStationMenu {
                     break;
                 case 5:
                     calculateTodaysBusiness();
+                    
                     break;
                 case 6:
                     calculateGivenDateBusiness();
@@ -103,7 +105,8 @@ public class ServiceStationMenu {
                 	serviceStation.addVehicle();
                     break;
                 case 2:
-                    displayAllVehicles();
+                	serviceStation.displayAllVehicles();
+                	
                     break;
                 case 3:
                     displayCustomerVehicles();

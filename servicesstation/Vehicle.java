@@ -34,5 +34,11 @@ class Vehicle implements Serializable {
     public int hashCode() {
         return Objects.hash(vehicleNumber);
     }
+
+	@Override
+	public String toString() {
+		return "Vehicle [manufacturer=" + manufacturer + ", model=" + model + ", vehicleNumber=" + vehicleNumber + "]";
+	}
+    
 }
 
